@@ -15,14 +15,14 @@
 //     });
 // });
 
-async function getData(url) {
-  try {
-    const dataFetch = await fetch(url);
-    const dataJson = await dataFetch.json();
-    console.log(dataJson);
-  } catch (error) {
-    console.log('EEEEERRRROR:', error);
-  }
-}
+// async function getData(url) {
+//   try {
+//     const dataFetch = await fetch(url);
+//     const dataJson = await dataFetch.json();
+//     console.log(dataJson);
+//   } catch (error) {
+//     console.log('EEEEERRRROR:', error);
+//   }
+// }
 
-getData('https://ranekapi.origamid.dev/json/api/produto');
+// getData('https://ranekapi.origamid.dev/json/api/produto');
