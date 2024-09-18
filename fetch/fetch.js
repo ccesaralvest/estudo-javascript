@@ -1,4 +1,4 @@
-// console.log('ex0 - Fetch');
+// ex0 - callback hell
 
 // const url = 'https://ranekapi.origamid.dev/json/api/produto';
 
@@ -15,6 +15,7 @@
 //     });
 // });
 
+// ex1 - async
 // async function getData(url) {
 //   try {
 //     const dataFetch = await fetch(url);

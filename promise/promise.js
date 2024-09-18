@@ -50,7 +50,7 @@ console.log('start promise');
 //   }, 3000);
 // });
 
-// vendo basicamente nesse momento que o que existe é apenas uma promessa nesse momento. A Promise não retornou nada ainda nesse momento de execução do JS
+//ex4 - vendo basicamente nesse momento que o que existe é apenas uma promessa nesse momento. A Promise não retornou nada ainda nesse momento de execução do JS
 const fazerPedido = new Promise((resolve, reject) => {
   setTimeout(() => {
     return reject('resultado do resolve');
@@ -58,17 +58,34 @@ const fazerPedido = new Promise((resolve, reject) => {
   }, 2000);
 });
 // apenas a promessa até então
-console.log('fazerPedido', fazerPedido);
+// console.log('fazerPedido', fazerPedido);
 
-fazerPedido
-  .then((response) => {
-    console.log('Deu Certo:', response);
-  })
-  .catch((response) => {
-    console.log('Deu Ruim:', response);
-  })
-  .finally((response) => {
-    console.log('acabou os THEN');
+// fazerPedido
+//   .then((response) => {
+//     console.log('Deu Certo:', response);
+//   })
+//   .catch((response) => {
+//     console.log('Deu Ruim:', response);
+//   })
+//   .finally((response) => {
+//     console.log('acabou os THEN');
+//   });
+
+// console.log('end promise');
+
+// ex5 - test async
+const fakePromise = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      setInterval(() => {
+        let count = 0;
+        console.log(count + 1);
+      }, 4000);
+      return resolve('Resolved FalePromise');
+    }, 4000);
   });
-
-console.log('end promise');
+async function start() {
+  const dataFakePromise = await fakePromise();
+  console.log(dataFakePromise);
+}
+start();
